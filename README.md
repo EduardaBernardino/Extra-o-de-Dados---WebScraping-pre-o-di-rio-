@@ -1,4 +1,4 @@
-AgRural → SQL Server (Soja)
+# AgRural → SQL Server (Soja)
 
 Coletor simples e robusto que faz web scraping dos preços de Soja do site da AgRural, normaliza a tabela (inclusive com rowspan), e realiza UPSERT no SQL Server com chave composta data + uf + praca.
 Inclui wrapper PowerShell e instruções para agendar no Windows (Task Scheduler).
@@ -60,7 +60,7 @@ Windows Authentication (sem senha)
 py -m pip install --upgrade pip
 py -m pip install requests beautifulsoup4 pandas pyodbc
 
-# rodar o coletor
+# Rodar o coletor
 py .\agrural_soja_to_sqlserver_windows.py `
   --auth windows `
   --server "NOMEPC\SQLEXPRESS" `
