@@ -1,0 +1,39 @@
+data,uf,praca,compra_R$/sc,var_dia_%,var_sem_%,var_mes_%
+,PR,Paranaguá,140.0,-1.0,-1.4,-1.4
+,PR,Ponta Grossa,136.5,-0.5,0.4,-0.4
+,PR,Guarapuava,134.0,-0.5,-0.7,-0.7
+,PR,Maringá,133.5,-1.0,-1.5,-0.4
+,PR,Cascavel,129.5,-1.5,-1.1,-2.3
+,PR,Francisco Beltrão,130.5,-1.5,-1.1,-2.2
+,SC,São Francisco do Sul,139.8,0.0,-1.5,-0.9
+,RS,Rio Grande,140.0,-1.0,-0.7,0.0
+,RS,Erechim,132.5,-0.5,-1.1,-0.7
+,RS,Passo Fundo,132.5,-0.5,-1.1,-0.7
+,MT,Rondonópolis,126.0,-2.0,0.0,0.0
+,MT,Primavera do Leste,123.0,-2.0,0.0,0.0
+,MT,Canarana,118.0,-1.0,0.9,0.4
+,MT,Sorriso,120.0,-2.0,0.4,-0.8
+,MT,Lucas do Rio Verde,119.5,0.0,0.8,0.0
+,MT,Sinop,116.0,-2.0,-0.9,-0.9
+,MT,Campo Novo do Parecis,117.0,-1.0,-1.7,-0.8
+,MT,Sapezal,117.0,-1.0,-1.7,-0.8
+,MS,Campo Grande,127.0,0.0,2.0,1.6
+,MS,Dourados,127.0,0.0,2.0,1.6
+,MS,São Gabriel do Oeste,123.0,-1.0,0.0,0.0
+,MS,Chapadão do Sul,123.0,-1.0,0.0,0.0
+,DF,Brasília,127.0,0.0,0.8,0.8
+,GO,Mineiros,126.5,-2.0,0.8,0.0
+,GO,Rio Verde,127.5,-2.0,0.8,0.0
+,GO,Jataí,126.5,-2.0,0.8,0.0
+,SP,Santos,142.0,0.0,0.0,0.0
+,SP,Orlândia,132.5,0.0,0.0,-1.1
+,SP,Ourinhos,132.5,0.0,0.0,-1.1
+,MG,Uberlândia,129.0,-1.0,0.8,-0.8
+,MG,Uberaba,129.0,-1.0,0.8,-0.8
+,MG,Unaí,127.0,0.0,0.8,0.8
+,BA,Luís Eduardo Magalhães,125.5,-2.0,-0.8,-1.6
+,MA,Balsas,120.0,-0.5,0.0,-4.0
+,MA,São Luís,138.0,0.0,0.4,0.7
+,TO,Palmas,121.0,0.0,2.1,-0.8
+,PI,Uruçuí,122.0,-1.0,0.0,-3.9
+,PA,Barcarena,131.0,-1.0,-0.4,1.2
