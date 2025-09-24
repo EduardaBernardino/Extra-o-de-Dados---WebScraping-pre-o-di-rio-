@@ -181,7 +181,7 @@ def fetch_rows() -> List[Dict]:
     i_var_w  = idx_of("1 semana", "semana")
     i_var_m  = idx_of("1 mês", "1 mes", "mês", "mes")
 
-    # dados começam após o cabeçalho, se detectado
+
     start_idx = (header_row + 1) if header_row is not None else 1
     data_rows = grid[start_idx:]
 
@@ -189,11 +189,10 @@ def fetch_rows() -> List[Dict]:
     last_uf: Optional[str] = None
 
     for r in data_rows:
-        # ignora linhas vazias ou de rodapé
         joined_lower = " ".join([c.lower() for c in r])
         if "agrural" in joined_lower:
             continue
-        # fallback se não achamos índices: usa últimas 5 colunas como dados
+
         if None in (i_praca, i_compra, i_var_d, i_var_w, i_var_m):
             if len(r) < 5:
                 continue
@@ -248,7 +247,7 @@ def main(output_csv: str = "soja_agrural.csv"):
     df = pd.DataFrame(rows, columns=[
         "data", "uf", "praca", "compra_R$/sc", "var_dia_%", "var_sem_%", "var_mes_%"
     ])
-    # ffill para garantir UF nas linhas sob rowspan
+
     df["uf"] = df["uf"].ffill()
     df = df.dropna(subset=["uf", "praca"]).reset_index(drop=True)
 
