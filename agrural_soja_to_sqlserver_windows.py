@@ -304,27 +304,28 @@ def main() -> int:
 
     conn_str = build_conn_str(args)
 
-
     rows = fetch_rows()
     # ffill UF (linhas sob rowspan)
     for i in range(1, len(rows)):
         if not rows[i]["uf"]:
             rows[i]["uf"] = rows[i - 1]["uf"]
 
-
     scrape_date = next((r.get("data") for r in rows if r.get("data")), None)
     if not scrape_date:
-        print("⚠️ Data do site não encontrada. Nada gravado (evitando data incorreta).")
+        print("ATENCAO: Data do site nao encontrada. Nada gravado (evitando data incorreta).")
         return 0
-
 
     last = get_max_date_from_db(conn_str)
-    if last and scrape_date <= last:
-        print(f"ℹ️ Sem novidades: site={scrape_date} <= banco={last}. Nada a fazer.")
+    if last and scrape_date < last:  # só bloqueia se a data do site for MAIS ANTIGA
+        print(f"Sem novidades: site={scrape_date} < banco={last}. Nada a fazer.")
         return 0
 
+    # data igual ou maior -> executa MERGE (idempotente; atualiza se valores mudaram)
     upsert_to_sqlserver(rows, conn_str)
     return 0
+
+
+
 
 if __name__ == "__main__":
     sys.exit(main())
